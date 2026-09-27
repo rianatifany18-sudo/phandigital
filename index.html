@@ -77,8 +77,11 @@
         }
 
         .card {
-            transition: transform .2s ease, box-shadow .2s ease,
-                        background-color .2s ease, border-color .2s ease;
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                background-color .2s ease,
+                border-color .2s ease;
         }
 
         .card:hover {
@@ -98,6 +101,7 @@
                 opacity: 0;
                 transform: translateY(6px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -115,7 +119,9 @@
 
         input,
         select {
-            transition: border-color .2s ease, box-shadow .2s ease;
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease;
         }
 
         input:focus,
@@ -155,7 +161,6 @@
         flex flex-col
     "
 >
-    <!-- LOGO -->
     <div class="h-20 px-6 flex items-center border-b border-slate-100 dark:border-slate-800">
         <button
             onclick="switchPage('dashboard')"
@@ -178,6 +183,7 @@
                 <div class="font-extrabold tracking-tight text-lg">
                     PhanDigital<span class="text-emerald-500">.</span>
                 </div>
+
                 <div class="text-[10px] uppercase tracking-[.2em] text-slate-400">
                     Personal Finance
                 </div>
@@ -185,7 +191,6 @@
         </button>
     </div>
 
-    <!-- NAVIGATION -->
     <div class="flex-1 overflow-y-auto px-4 py-6">
 
         <p class="px-3 mb-3 text-[10px] font-bold uppercase tracking-[.2em] text-slate-400">
@@ -258,6 +263,7 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-width="2" d="M21 12.8A8.5 8.5 0 1111.2 3 6.7 6.7 0 0021 12.8z"/>
                 </svg>
+
                 Dark Mode
             </span>
 
@@ -269,7 +275,6 @@
 
     </div>
 
-    <!-- SIDEBAR FOOTER -->
     <div class="p-4 border-t border-slate-100 dark:border-slate-800">
         <div
             class="
@@ -283,10 +288,12 @@
                 <div class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center">
                     ✓
                 </div>
+
                 <div>
                     <p class="text-xs font-bold text-slate-700 dark:text-slate-200">
                         Data tersimpan lokal
                     </p>
+
                     <p class="text-[10px] text-slate-400">
                         LocalStorage
                     </p>
@@ -412,10 +419,9 @@
     <!-- CONTENT -->
     <main class="p-4 sm:p-6 lg:p-8 max-w-[1600px] mx-auto">
 
-        <!-- ================= DASHBOARD ================= -->
+        <!-- DASHBOARD -->
         <section id="page-dashboard" class="page fade-in space-y-6">
 
-            <!-- WELCOME -->
             <div
                 class="
                     relative overflow-hidden
@@ -512,19 +518,12 @@
                 ></div>
             </div>
 
-            <!-- BALANCE CARDS -->
+            <!-- BALANCE -->
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
 
                 <div class="card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
                     <div class="flex items-center justify-between">
-                        <div
-                            class="
-                                w-10 h-10 rounded-xl
-                                bg-emerald-50 dark:bg-emerald-950/50
-                                text-emerald-600 dark:text-emerald-400
-                                flex items-center justify-center
-                            "
-                        >
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
                             $
                         </div>
 
@@ -551,14 +550,7 @@
 
                 <div class="card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
                     <div class="flex items-center justify-between">
-                        <div
-                            class="
-                                w-10 h-10 rounded-xl
-                                bg-emerald-50 dark:bg-emerald-950/50
-                                text-emerald-600 dark:text-emerald-400
-                                flex items-center justify-center
-                            "
-                        >
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
                             ↗
                         </div>
 
@@ -585,14 +577,7 @@
 
                 <div class="card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
                     <div class="flex items-center justify-between">
-                        <div
-                            class="
-                                w-10 h-10 rounded-xl
-                                bg-rose-50 dark:bg-rose-950/50
-                                text-rose-600 dark:text-rose-400
-                                flex items-center justify-center
-                            "
-                        >
+                        <div class="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 flex items-center justify-center">
                             ↘
                         </div>
 
@@ -619,14 +604,7 @@
 
                 <div class="card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
                     <div class="flex items-center justify-between">
-                        <div
-                            class="
-                                w-10 h-10 rounded-xl
-                                bg-blue-50 dark:bg-blue-950/50
-                                text-blue-600 dark:text-blue-400
-                                flex items-center justify-center
-                            "
-                        >
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center">
                             %
                         </div>
 
@@ -646,10 +624,7 @@
                         Rp 0
                     </p>
 
-                    <p
-                        id="cashflow-status"
-                        class="mt-2 text-[11px] text-slate-400"
-                    >
+                    <p id="cashflow-status" class="mt-2 text-[11px] text-slate-400">
                         —
                     </p>
                 </div>
@@ -659,28 +634,22 @@
             <!-- CHARTS -->
             <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
-                <div
-                    class="
-                        xl:col-span-2
-                        card
-                        bg-white dark:bg-slate-900
-                        border border-slate-200 dark:border-slate-800
-                        rounded-2xl
-                        p-5 sm:p-6
-                    "
-                >
+                <div class="xl:col-span-2 card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6">
+
                     <div class="flex items-center justify-between mb-6">
 
                         <div>
                             <h3 class="font-extrabold text-sm sm:text-base">
                                 Cash Flow
                             </h3>
+
                             <p class="text-xs text-slate-400 mt-1">
                                 Pemasukan dan pengeluaran 6 bulan terakhir
                             </p>
                         </div>
 
                         <div class="flex gap-3 text-[10px] font-semibold">
+
                             <span class="flex items-center gap-1">
                                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                                 Masuk
@@ -690,6 +659,7 @@
                                 <span class="w-2 h-2 rounded-full bg-rose-500"></span>
                                 Keluar
                             </span>
+
                         </div>
 
                     </div>
@@ -697,17 +667,11 @@
                     <div class="h-[280px]">
                         <canvas id="cashflow-chart"></canvas>
                     </div>
+
                 </div>
 
-                <div
-                    class="
-                        card
-                        bg-white dark:bg-slate-900
-                        border border-slate-200 dark:border-slate-800
-                        rounded-2xl
-                        p-5 sm:p-6
-                    "
-                >
+                <div class="card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6">
+
                     <div class="mb-4">
                         <h3 class="font-extrabold text-sm sm:text-base">
                             Pengeluaran
@@ -723,6 +687,7 @@
                     </div>
 
                     <div id="expense-legend" class="mt-4 space-y-2"></div>
+
                 </div>
 
             </div>
@@ -730,35 +695,24 @@
             <!-- TODAY + RECENT -->
             <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
-                <div
-                    class="
-                        card
-                        bg-white dark:bg-slate-900
-                        border border-slate-200 dark:border-slate-800
-                        rounded-2xl
-                        p-5 sm:p-6
-                    "
-                >
+                <div class="card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6">
+
                     <div class="flex justify-between items-center">
+
                         <div>
                             <h3 class="font-extrabold text-sm">
                                 Hari Ini
                             </h3>
+
                             <p class="text-xs text-slate-400 mt-1">
                                 Ringkasan aktivitas
                             </p>
                         </div>
 
-                        <span
-                            class="
-                                px-2.5 py-1
-                                rounded-full
-                                bg-slate-100 dark:bg-slate-800
-                                text-[10px] font-bold
-                            "
-                        >
+                        <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold">
                             LIVE
                         </span>
+
                     </div>
 
                     <div class="mt-6 space-y-4">
@@ -767,6 +721,7 @@
                             <span class="text-xs text-slate-400">
                                 Pemasukan
                             </span>
+
                             <span
                                 id="hari-ini-masuk"
                                 class="text-sm font-extrabold text-emerald-600"
@@ -779,6 +734,7 @@
                             <span class="text-xs text-slate-400">
                                 Pengeluaran
                             </span>
+
                             <span
                                 id="hari-ini-keluar"
                                 class="text-sm font-extrabold text-rose-600"
@@ -791,6 +747,7 @@
                             <span class="text-xs font-semibold">
                                 Net Hari Ini
                             </span>
+
                             <span
                                 id="hari-ini-net"
                                 class="text-sm font-extrabold"
@@ -800,18 +757,11 @@
                         </div>
 
                     </div>
+
                 </div>
 
-                <div
-                    class="
-                        xl:col-span-2
-                        card
-                        bg-white dark:bg-slate-900
-                        border border-slate-200 dark:border-slate-800
-                        rounded-2xl
-                        p-5 sm:p-6
-                    "
-                >
+                <div class="xl:col-span-2 card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6">
+
                     <div class="flex justify-between items-center mb-5">
 
                         <div>
@@ -820,17 +770,13 @@
                             </h3>
 
                             <p class="text-xs text-slate-400 mt-1">
-                                Aktivitas keuangan terakhir
+                                5 transaksi terbaru
                             </p>
                         </div>
 
                         <button
                             onclick="switchPage('transactions')"
-                            class="
-                                text-xs font-bold
-                                text-emerald-600
-                                hover:text-emerald-700
-                            "
+                            class="text-xs font-bold text-emerald-600 hover:text-emerald-700"
                         >
                             Lihat semua →
                         </button>
@@ -838,24 +784,18 @@
                     </div>
 
                     <div id="recent-transactions" class="space-y-2"></div>
+
                 </div>
 
             </div>
 
             <!-- FINANCIAL HEALTH -->
-            <div
-                class="
-                    card
-                    bg-gradient-to-r from-emerald-600 to-teal-600
-                    rounded-2xl
-                    p-6
-                    text-white
-                    shadow-lg shadow-emerald-600/20
-                "
-            >
+            <div class="card bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-6 text-white shadow-lg shadow-emerald-600/20">
+
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
                     <div>
+
                         <p class="text-emerald-100 text-xs font-semibold uppercase tracking-wider">
                             Financial Snapshot
                         </p>
@@ -870,6 +810,7 @@
                         >
                             Belum cukup data untuk membuat ringkasan.
                         </p>
+
                     </div>
 
                     <div class="flex gap-8">
@@ -903,16 +844,18 @@
                     </div>
 
                 </div>
+
             </div>
 
         </section>
 
-        <!-- ================= TRANSACTIONS ================= -->
+        <!-- TRANSACTIONS -->
         <section id="page-transactions" class="page hidden fade-in space-y-6">
 
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
                 <div>
+
                     <p class="text-xs text-emerald-600 font-bold uppercase tracking-wider">
                         Finance
                     </p>
@@ -924,116 +867,190 @@
                     <p class="text-sm text-slate-400 mt-1">
                         Kelola seluruh pemasukan dan pengeluaran.
                     </p>
+
                 </div>
 
                 <button
                     onclick="openTransactionModal()"
-                    class="
-                        px-5 py-3
-                        rounded-xl
-                        bg-emerald-600
-                        hover:bg-emerald-700
-                        text-white
-                        text-sm font-bold
-                        shadow-lg shadow-emerald-600/20
-                    "
+                    class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold shadow-lg shadow-emerald-600/20"
                 >
                     + Tambah Transaksi
                 </button>
 
             </div>
 
-            <!-- TRANSACTION SUMMARY -->
+            <!-- SUMMARY -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
-                    <p class="text-xs text-slate-400">Total Pemasukan</p>
-                    <p id="transaction-total-in" class="mt-2 text-xl font-extrabold text-emerald-600">
+
+                    <p class="text-xs text-slate-400">
+                        Total Pemasukan
+                    </p>
+
+                    <p
+                        id="transaction-total-in"
+                        class="mt-2 text-xl font-extrabold text-emerald-600"
+                    >
                         Rp 0
                     </p>
+
                 </div>
 
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
-                    <p class="text-xs text-slate-400">Total Pengeluaran</p>
-                    <p id="transaction-total-out" class="mt-2 text-xl font-extrabold text-rose-600">
+
+                    <p class="text-xs text-slate-400">
+                        Total Pengeluaran
+                    </p>
+
+                    <p
+                        id="transaction-total-out"
+                        class="mt-2 text-xl font-extrabold text-rose-600"
+                    >
                         Rp 0
                     </p>
+
                 </div>
 
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
-                    <p class="text-xs text-slate-400">Jumlah Transaksi</p>
-                    <p id="transaction-count" class="mt-2 text-xl font-extrabold">
+
+                    <p class="text-xs text-slate-400">
+                        Jumlah Transaksi
+                    </p>
+
+                    <p
+                        id="transaction-count"
+                        class="mt-2 text-xl font-extrabold"
+                    >
                         0
                     </p>
+
                 </div>
 
             </div>
 
             <!-- TABLE -->
-            <div
-                class="
-                    bg-white dark:bg-slate-900
-                    border border-slate-200 dark:border-slate-800
-                    rounded-2xl
-                    overflow-hidden
-                "
-            >
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
 
                 <div class="p-5 border-b border-slate-100 dark:border-slate-800">
-                    <div class="flex flex-col sm:flex-row gap-3 justify-between">
+
+                    <div class="flex flex-col lg:flex-row gap-4 justify-between lg:items-center">
 
                         <div>
                             <h3 class="font-extrabold text-sm">
-                                Semua Transaksi
+                                Transaksi Terbaru
                             </h3>
+
                             <p class="text-xs text-slate-400 mt-1">
-                                Riwayat keuangan tersimpan di perangkat.
+                                Pilih jumlah transaksi yang ingin ditampilkan.
                             </p>
                         </div>
 
-                        <input
-                            id="transaction-search"
-                            oninput="renderTransactionsPage()"
-                            type="search"
-                            placeholder="Cari transaksi..."
-                            class="
-                                w-full sm:w-64
-                                px-4 py-2.5
-                                rounded-xl
-                                border border-slate-200 dark:border-slate-700
-                                bg-slate-50 dark:bg-slate-800
-                                text-sm
-                            "
-                        >
+                        <div class="flex flex-col sm:flex-row gap-2">
+
+                            <!-- SEARCH -->
+                            <input
+                                id="transaction-search"
+                                oninput="renderTransactionsPage()"
+                                type="search"
+                                placeholder="Cari transaksi..."
+                                class="
+                                    w-full sm:w-64
+                                    px-4 py-2.5
+                                    rounded-xl
+                                    border border-slate-200 dark:border-slate-700
+                                    bg-slate-50 dark:bg-slate-800
+                                    text-sm
+                                "
+                            >
+
+                            <!-- LIMIT -->
+                            <select
+                                id="transaction-limit"
+                                onchange="renderTransactionsPage()"
+                                class="
+                                    w-full sm:w-auto
+                                    px-4 py-2.5
+                                    rounded-xl
+                                    border border-slate-200 dark:border-slate-700
+                                    bg-slate-50 dark:bg-slate-800
+                                    text-sm font-semibold
+                                "
+                            >
+                                <option value="5" selected>
+                                    5 transaksi
+                                </option>
+
+                                <option value="10">
+                                    10 transaksi
+                                </option>
+
+                                <option value="50">
+                                    50 transaksi
+                                </option>
+
+                                <option value="100">
+                                    100 transaksi
+                                </option>
+                            </select>
+
+                        </div>
 
                     </div>
+
                 </div>
 
                 <div class="overflow-x-auto">
+
                     <table class="w-full min-w-[760px]">
+
                         <thead>
+
                             <tr class="bg-slate-50 dark:bg-slate-800/70 text-[10px] uppercase tracking-wider text-slate-400">
-                                <th class="text-left px-5 py-4">Tanggal</th>
-                                <th class="text-left px-5 py-4">Tipe</th>
-                                <th class="text-left px-5 py-4">Kategori</th>
-                                <th class="text-left px-5 py-4">Keterangan</th>
-                                <th class="text-right px-5 py-4">Nominal</th>
-                                <th class="text-center px-5 py-4">Aksi</th>
+
+                                <th class="text-left px-5 py-4">
+                                    Tanggal
+                                </th>
+
+                                <th class="text-left px-5 py-4">
+                                    Tipe
+                                </th>
+
+                                <th class="text-left px-5 py-4">
+                                    Kategori
+                                </th>
+
+                                <th class="text-left px-5 py-4">
+                                    Keterangan
+                                </th>
+
+                                <th class="text-right px-5 py-4">
+                                    Nominal
+                                </th>
+
+                                <th class="text-center px-5 py-4">
+                                    Aksi
+                                </th>
+
                             </tr>
+
                         </thead>
 
                         <tbody id="tabel-transaksi"></tbody>
+
                     </table>
+
                 </div>
 
             </div>
 
         </section>
 
-        <!-- ================= DEBT ================= -->
+        <!-- DEBT -->
         <section id="page-hutang" class="page hidden fade-in space-y-6">
 
             <div>
+
                 <p class="text-xs text-amber-600 font-bold uppercase tracking-wider">
                     Liabilities
                 </p>
@@ -1045,43 +1062,64 @@
                 <p class="text-sm text-slate-400 mt-1">
                     Pantau kewajiban dan uang yang masih harus kamu terima.
                 </p>
+
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
-                    <p class="text-xs text-slate-400">Total Hutang</p>
-                    <p id="total-hutang" class="mt-2 text-xl font-extrabold text-amber-600">
+
+                    <p class="text-xs text-slate-400">
+                        Total Hutang
+                    </p>
+
+                    <p
+                        id="total-hutang"
+                        class="mt-2 text-xl font-extrabold text-amber-600"
+                    >
                         Rp 0
                     </p>
+
                 </div>
 
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
-                    <p class="text-xs text-slate-400">Total Piutang</p>
-                    <p id="total-piutang" class="mt-2 text-xl font-extrabold text-blue-600">
+
+                    <p class="text-xs text-slate-400">
+                        Total Piutang
+                    </p>
+
+                    <p
+                        id="total-piutang"
+                        class="mt-2 text-xl font-extrabold text-blue-600"
+                    >
                         Rp 0
                     </p>
+
                 </div>
 
                 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
-                    <p class="text-xs text-slate-400">Net</p>
-                    <p id="total-hutang-info" class="mt-2 text-xl font-extrabold">
+
+                    <p class="text-xs text-slate-400">
+                        Net
+                    </p>
+
+                    <p
+                        id="total-hutang-info"
+                        class="mt-2 text-xl font-extrabold"
+                    >
                         Rp 0
                     </p>
+
                 </div>
 
             </div>
 
-            <div
-                class="
-                    bg-white dark:bg-slate-900
-                    border border-slate-200 dark:border-slate-800
-                    rounded-2xl
-                    p-5 sm:p-6
-                "
-            >
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6">
+
                 <div class="flex justify-between items-center mb-5">
+
                     <div>
+
                         <h3 class="font-extrabold">
                             Tambah Catatan
                         </h3>
@@ -1089,32 +1127,39 @@
                         <p class="text-xs text-slate-400 mt-1">
                             Catat kewajiban atau piutang baru.
                         </p>
+
                     </div>
+
                 </div>
 
-                <form id="form-hutang" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <form
+                    id="form-hutang"
+                    class="grid grid-cols-1 md:grid-cols-2 gap-4"
+                >
 
                     <div>
+
                         <label class="text-xs font-semibold text-slate-500">
                             Tipe
                         </label>
 
                         <select
                             id="hutang-tipe"
-                            class="
-                                mt-2 w-full
-                                px-4 py-3
-                                rounded-xl
-                                bg-slate-50 dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                            "
+                            class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                         >
-                            <option value="Hutang">Saya Berhutang</option>
-                            <option value="Piutang">Orang Lain Berhutang</option>
+                            <option value="Hutang">
+                                Saya Berhutang
+                            </option>
+
+                            <option value="Piutang">
+                                Orang Lain Berhutang
+                            </option>
                         </select>
+
                     </div>
 
                     <div>
+
                         <label class="text-xs font-semibold text-slate-500">
                             Nominal
                         </label>
@@ -1124,17 +1169,13 @@
                             type="number"
                             required
                             placeholder="150000"
-                            class="
-                                mt-2 w-full
-                                px-4 py-3
-                                rounded-xl
-                                bg-slate-50 dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                            "
+                            class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                         >
+
                     </div>
 
                     <div>
+
                         <label class="text-xs font-semibold text-slate-500">
                             Nama
                         </label>
@@ -1144,17 +1185,13 @@
                             type="text"
                             required
                             placeholder="Budi"
-                            class="
-                                mt-2 w-full
-                                px-4 py-3
-                                rounded-xl
-                                bg-slate-50 dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                            "
+                            class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                         >
+
                     </div>
 
                     <div>
+
                         <label class="text-xs font-semibold text-slate-500">
                             Jatuh Tempo
                         </label>
@@ -1163,73 +1200,79 @@
                             id="hutang-tanggal"
                             type="date"
                             required
-                            class="
-                                mt-2 w-full
-                                px-4 py-3
-                                rounded-xl
-                                bg-slate-50 dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                            "
+                            class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                         >
+
                     </div>
 
                     <button
                         type="submit"
-                        class="
-                            md:col-span-2
-                            py-3
-                            rounded-xl
-                            bg-amber-500
-                            hover:bg-amber-600
-                            text-white
-                            font-bold
-                        "
+                        class="md:col-span-2 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold"
                     >
                         Simpan Catatan
                     </button>
 
                 </form>
+
             </div>
 
-            <div
-                class="
-                    bg-white dark:bg-slate-900
-                    border border-slate-200 dark:border-slate-800
-                    rounded-2xl
-                    overflow-hidden
-                "
-            >
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
 
                 <div class="p-5 border-b border-slate-100 dark:border-slate-800">
+
                     <h3 class="font-extrabold text-sm">
                         Daftar Aktif
                     </h3>
+
                 </div>
 
                 <div class="overflow-x-auto">
+
                     <table class="w-full min-w-[650px]">
+
                         <thead>
+
                             <tr class="bg-slate-50 dark:bg-slate-800/70 text-[10px] uppercase tracking-wider text-slate-400">
-                                <th class="text-left px-5 py-4">Tanggal</th>
-                                <th class="text-left px-5 py-4">Status</th>
-                                <th class="text-left px-5 py-4">Pihak</th>
-                                <th class="text-right px-5 py-4">Nominal</th>
-                                <th class="text-center px-5 py-4">Aksi</th>
+
+                                <th class="text-left px-5 py-4">
+                                    Tanggal
+                                </th>
+
+                                <th class="text-left px-5 py-4">
+                                    Status
+                                </th>
+
+                                <th class="text-left px-5 py-4">
+                                    Pihak
+                                </th>
+
+                                <th class="text-right px-5 py-4">
+                                    Nominal
+                                </th>
+
+                                <th class="text-center px-5 py-4">
+                                    Aksi
+                                </th>
+
                             </tr>
+
                         </thead>
 
                         <tbody id="tabel-hutang"></tbody>
+
                     </table>
+
                 </div>
 
             </div>
 
         </section>
 
-        <!-- ================= WISHLIST ================= -->
+        <!-- WISHLIST -->
         <section id="page-wishlist" class="page hidden fade-in space-y-6">
 
             <div>
+
                 <p class="text-xs text-purple-600 font-bold uppercase tracking-wider">
                     Goals
                 </p>
@@ -1241,19 +1284,15 @@
                 <p class="text-sm text-slate-400 mt-1">
                     Ubah barang impian menjadi target tabungan yang terukur.
                 </p>
+
             </div>
 
-            <div
-                class="
-                    bg-gradient-to-br from-purple-600 to-indigo-700
-                    rounded-3xl
-                    p-6
-                    text-white
-                "
-            >
+            <div class="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-3xl p-6 text-white">
+
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 
                     <div>
+
                         <p class="text-purple-200 text-xs uppercase font-bold tracking-wider">
                             Your Goals
                         </p>
@@ -1266,29 +1305,30 @@
                         <p class="mt-2 text-sm text-purple-100">
                             Konsisten menabung lebih penting daripada nominal besar.
                         </p>
+
                     </div>
 
                     <div class="text-right">
+
                         <p class="text-xs text-purple-200">
                             Total Target
                         </p>
 
-                        <p id="wishlist-total-value" class="text-2xl font-extrabold">
+                        <p
+                            id="wishlist-total-value"
+                            class="text-2xl font-extrabold"
+                        >
                             Rp 0
                         </p>
+
                     </div>
 
                 </div>
+
             </div>
 
-            <div
-                class="
-                    bg-white dark:bg-slate-900
-                    border border-slate-200 dark:border-slate-800
-                    rounded-2xl
-                    p-5 sm:p-6
-                "
-            >
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6">
+
                 <h3 class="font-extrabold">
                     Tambah Target Baru
                 </h3>
@@ -1299,6 +1339,7 @@
                 >
 
                     <div class="md:col-span-2">
+
                         <label class="text-xs font-semibold text-slate-500">
                             Nama Target
                         </label>
@@ -1308,17 +1349,13 @@
                             type="text"
                             required
                             placeholder="Contoh: Laptop Gaming"
-                            class="
-                                mt-2 w-full
-                                px-4 py-3
-                                rounded-xl
-                                bg-slate-50 dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                            "
+                            class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                         >
+
                     </div>
 
                     <div>
+
                         <label class="text-xs font-semibold text-slate-500">
                             Harga Target
                         </label>
@@ -1328,32 +1365,20 @@
                             type="number"
                             required
                             placeholder="7500000"
-                            class="
-                                mt-2 w-full
-                                px-4 py-3
-                                rounded-xl
-                                bg-slate-50 dark:bg-slate-800
-                                border border-slate-200 dark:border-slate-700
-                            "
+                            class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                         >
+
                     </div>
 
                     <button
                         type="submit"
-                        class="
-                            md:col-span-3
-                            py-3
-                            rounded-xl
-                            bg-purple-600
-                            hover:bg-purple-700
-                            text-white
-                            font-bold
-                        "
+                        class="md:col-span-3 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold"
                     >
                         + Tambah Target
                     </button>
 
                 </form>
+
             </div>
 
             <div
@@ -1365,51 +1390,35 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="px-4 sm:px-6 lg:px-8 pb-8 max-w-[1600px] mx-auto">
-        <div
-            class="
-                border-t border-slate-200 dark:border-slate-800
-                pt-6
-                flex flex-col sm:flex-row
-                gap-2
-                justify-between
-                text-[11px]
-                text-slate-400
-            "
-        >
-            <span>© 2026 PhanDigital</span>
-            <span>Personal Finance Dashboard · LocalStorage</span>
+
+        <div class="border-t border-slate-200 dark:border-slate-800 pt-6 flex flex-col sm:flex-row gap-2 justify-between text-[11px] text-slate-400">
+
+            <span>
+                © 2026 PhanDigital
+            </span>
+
+            <span>
+                Personal Finance Dashboard · LocalStorage
+            </span>
+
         </div>
+
     </footer>
 
 </div>
 
-<!-- ================= TRANSACTION MODAL ================= -->
-
+<!-- TRANSACTION MODAL -->
 <div
     id="transaction-modal"
-    class="
-        hidden fixed inset-0 z-[100]
-        bg-slate-950/60
-        backdrop-blur-sm
-        items-center justify-center
-        p-4
-    "
+    class="hidden fixed inset-0 z-[100] bg-slate-950/60 backdrop-blur-sm items-center justify-center p-4"
 >
-    <div
-        class="
-            w-full max-w-lg
-            bg-white dark:bg-slate-900
-            rounded-3xl
-            shadow-2xl
-            overflow-hidden
-        "
-    >
+    <div class="w-full max-w-lg bg-white dark:bg-slate-900 rounded-3xl shadow-2xl overflow-hidden">
 
         <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between">
 
             <div>
+
                 <p
                     id="modal-type-label"
                     class="text-xs font-bold uppercase tracking-wider text-emerald-600"
@@ -1420,6 +1429,7 @@
                 <h3 class="mt-1 text-xl font-extrabold">
                     Tambah Transaksi
                 </h3>
+
             </div>
 
             <button
@@ -1440,6 +1450,7 @@
             >
 
             <div>
+
                 <label class="text-xs font-semibold text-slate-500">
                     Nominal
                 </label>
@@ -1449,35 +1460,26 @@
                     type="number"
                     required
                     placeholder="500000"
-                    class="
-                        mt-2 w-full
-                        px-4 py-3
-                        rounded-xl
-                        bg-slate-50 dark:bg-slate-800
-                        border border-slate-200 dark:border-slate-700
-                        text-lg font-bold
-                    "
+                    class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-lg font-bold"
                 >
+
             </div>
 
             <div>
+
                 <label class="text-xs font-semibold text-slate-500">
                     Kategori
                 </label>
 
                 <select
                     id="modal-kategori"
-                    class="
-                        mt-2 w-full
-                        px-4 py-3
-                        rounded-xl
-                        bg-slate-50 dark:bg-slate-800
-                        border border-slate-200 dark:border-slate-700
-                    "
+                    class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                 ></select>
+
             </div>
 
             <div>
+
                 <label class="text-xs font-semibold text-slate-500">
                     Tanggal
                 </label>
@@ -1486,17 +1488,13 @@
                     id="modal-tanggal"
                     type="date"
                     required
-                    class="
-                        mt-2 w-full
-                        px-4 py-3
-                        rounded-xl
-                        bg-slate-50 dark:bg-slate-800
-                        border border-slate-200 dark:border-slate-700
-                    "
+                    class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                 >
+
             </div>
 
             <div>
+
                 <label class="text-xs font-semibold text-slate-500">
                     Keterangan
                 </label>
@@ -1505,73 +1503,58 @@
                     id="modal-keterangan"
                     type="text"
                     placeholder="Contoh: Gaji bulan ini"
-                    class="
-                        mt-2 w-full
-                        px-4 py-3
-                        rounded-xl
-                        bg-slate-50 dark:bg-slate-800
-                        border border-slate-200 dark:border-slate-700
-                    "
+                    class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
                 >
+
             </div>
 
             <button
                 id="modal-submit"
                 type="submit"
-                class="
-                    w-full
-                    py-3.5
-                    rounded-xl
-                    bg-emerald-600
-                    hover:bg-emerald-700
-                    text-white
-                    font-bold
-                    shadow-lg shadow-emerald-600/20
-                "
+                class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/20"
             >
                 Simpan Pemasukan
             </button>
 
         </form>
+
     </div>
 </div>
 
 <!-- TOAST -->
 <div
     id="toast"
-    class="
-        fixed right-4 bottom-4 z-[200]
-        translate-y-20 opacity-0
-        transition-all duration-300
-        bg-slate-900 dark:bg-white
-        text-white dark:text-slate-900
-        px-5 py-3
-        rounded-xl
-        shadow-2xl
-        text-sm font-semibold
-    "
+    class="fixed right-4 bottom-4 z-[200] translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-2xl text-sm font-semibold"
 >
     Tersimpan
 </div>
 
 <script>
+
 /* =========================================================
    DATA
 ========================================================= */
 
 let transactions =
-    JSON.parse(localStorage.getItem('dompetku_transactions')) || [];
+    JSON.parse(
+        localStorage.getItem('dompetku_transactions')
+    ) || [];
 
 let debts =
-    JSON.parse(localStorage.getItem('dompetku_debts')) || [];
+    JSON.parse(
+        localStorage.getItem('dompetku_debts')
+    ) || [];
 
 let wishlist =
-    JSON.parse(localStorage.getItem('dompetku_wishlist')) || [];
+    JSON.parse(
+        localStorage.getItem('dompetku_wishlist')
+    ) || [];
 
 let cashflowChart = null;
 let expenseChart = null;
 
-const todayStr = new Date().toISOString().split('T')[0];
+const todayStr =
+    new Date().toISOString().split('T')[0];
 
 const monthNames = [
     'Januari',
@@ -1594,14 +1577,20 @@ const monthNames = [
 ========================================================= */
 
 function formatRupiah(value) {
-    return new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-        minimumFractionDigits: 0
-    }).format(Number(value) || 0);
+
+    return new Intl.NumberFormat(
+        'id-ID',
+        {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0
+        }
+    ).format(Number(value) || 0);
 }
 
+
 function escapeHtml(value) {
+
     return String(value ?? '')
         .replaceAll('&', '&amp;')
         .replaceAll('<', '&lt;')
@@ -1610,7 +1599,9 @@ function escapeHtml(value) {
         .replaceAll("'", '&#039;');
 }
 
+
 function saveData() {
+
     localStorage.setItem(
         'dompetku_transactions',
         JSON.stringify(transactions)
@@ -1627,21 +1618,58 @@ function saveData() {
     );
 }
 
+
 function toast(message) {
-    const el = document.getElementById('toast');
+
+    const el =
+        document.getElementById('toast');
 
     el.innerText = message;
-    el.classList.remove('translate-y-20', 'opacity-0');
+
+    el.classList.remove(
+        'translate-y-20',
+        'opacity-0'
+    );
 
     setTimeout(() => {
-        el.classList.add('translate-y-20', 'opacity-0');
+
+        el.classList.add(
+            'translate-y-20',
+            'opacity-0'
+        );
+
     }, 2200);
 }
 
+
 function getMonthKey(date = new Date()) {
+
     return `${date.getFullYear()}-${String(
         date.getMonth() + 1
     ).padStart(2, '0')}`;
+}
+
+
+/*
+ * Helper untuk mengurutkan transaksi
+ * berdasarkan tanggal terbaru.
+ */
+function sortTransactionsLatest(list) {
+
+    return [...list].sort((a, b) => {
+
+        const dateA =
+            new Date(a.tanggal).getTime();
+
+        const dateB =
+            new Date(b.tanggal).getTime();
+
+        if (dateB !== dateA) {
+            return dateB - dateA;
+        }
+
+        return Number(b.id) - Number(a.id);
+    });
 }
 
 
@@ -1650,26 +1678,49 @@ function getMonthKey(date = new Date()) {
 ========================================================= */
 
 function setTheme(theme) {
+
     if (theme === 'dark') {
+
         document.documentElement.classList.add('dark');
-        localStorage.setItem('phandigital_theme', 'dark');
+
+        localStorage.setItem(
+            'phandigital_theme',
+            'dark'
+        );
+
     } else {
+
         document.documentElement.classList.remove('dark');
-        localStorage.setItem('phandigital_theme', 'light');
+
+        localStorage.setItem(
+            'phandigital_theme',
+            'light'
+        );
     }
 
     updateCharts();
 }
 
-function toggleDarkMode() {
-    const dark =
-        document.documentElement.classList.contains('dark');
 
-    setTheme(dark ? 'light' : 'dark');
+function toggleDarkMode() {
+
+    const dark =
+        document.documentElement.classList.contains(
+            'dark'
+        );
+
+    setTheme(
+        dark
+            ? 'light'
+            : 'dark'
+    );
 }
 
+
 const savedTheme =
-    localStorage.getItem('phandigital_theme') || 'light';
+    localStorage.getItem(
+        'phandigital_theme'
+    ) || 'light';
 
 setTheme(savedTheme);
 
@@ -1679,19 +1730,26 @@ setTheme(savedTheme);
 ========================================================= */
 
 function openSidebar() {
+
     document
         .getElementById('sidebar')
-        .classList.remove('-translate-x-full');
+        .classList.remove(
+            '-translate-x-full'
+        );
 
     document
         .getElementById('mobile-overlay')
         .classList.remove('hidden');
 }
 
+
 function closeSidebar() {
+
     document
         .getElementById('sidebar')
-        .classList.add('-translate-x-full');
+        .classList.add(
+            '-translate-x-full'
+        );
 
     document
         .getElementById('mobile-overlay')
@@ -1704,42 +1762,65 @@ function closeSidebar() {
 ========================================================= */
 
 const pageTitles = {
-    dashboard: 'Dashboard',
-    transactions: 'Transaksi',
-    hutang: 'Hutang & Piutang',
-    wishlist: 'Target & Wishlist'
+
+    dashboard:
+        'Dashboard',
+
+    transactions:
+        'Transaksi',
+
+    hutang:
+        'Hutang & Piutang',
+
+    wishlist:
+        'Target & Wishlist'
 };
+
 
 function switchPage(page) {
 
-    document.querySelectorAll('.page').forEach(el => {
-        el.classList.add('hidden');
-    });
+    document
+        .querySelectorAll('.page')
+        .forEach(el => {
+            el.classList.add('hidden');
+        });
 
     document
         .getElementById(`page-${page}`)
         .classList.remove('hidden');
 
-    document.querySelectorAll('.sidebar-item').forEach(el => {
-        el.classList.remove('active');
-        el.classList.add(
-            'text-slate-600',
-            'dark:text-slate-300'
-        );
-    });
+    document
+        .querySelectorAll('.sidebar-item')
+        .forEach(el => {
+
+            el.classList.remove('active');
+
+            el.classList.add(
+                'text-slate-600',
+                'dark:text-slate-300'
+            );
+        });
 
     const activeNav =
-        document.getElementById(`nav-${page}`);
+        document.getElementById(
+            `nav-${page}`
+        );
 
     if (activeNav) {
-        activeNav.classList.add('active');
+
+        activeNav.classList.add(
+            'active'
+        );
+
         activeNav.classList.remove(
             'text-slate-600',
             'dark:text-slate-300'
         );
     }
 
-    document.getElementById('page-title').innerText =
+    document.getElementById(
+        'page-title'
+    ).innerText =
         pageTitles[page];
 
     if (page === 'transactions') {
@@ -1767,13 +1848,22 @@ function switchPage(page) {
    TRANSACTION MODAL
 ========================================================= */
 
-function openTransactionModal(type = 'IN') {
+function openTransactionModal(
+    type = 'IN'
+) {
 
     const modal =
-        document.getElementById('transaction-modal');
+        document.getElementById(
+            'transaction-modal'
+        );
 
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+    modal.classList.remove(
+        'hidden'
+    );
+
+    modal.classList.add(
+        'flex'
+    );
 
     document.getElementById(
         'modal-transaction-type'
@@ -1786,39 +1876,62 @@ function openTransactionModal(type = 'IN') {
     updateTransactionModal(type);
 }
 
+
 function closeTransactionModal() {
 
     const modal =
-        document.getElementById('transaction-modal');
+        document.getElementById(
+            'transaction-modal'
+        );
 
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
+    modal.classList.add(
+        'hidden'
+    );
 
-    document.getElementById('transaction-form').reset();
+    modal.classList.remove(
+        'flex'
+    );
+
+    document
+        .getElementById(
+            'transaction-form'
+        )
+        .reset();
 
     document.getElementById(
         'modal-tanggal'
     ).value = todayStr;
 }
 
+
 function updateTransactionModal(type) {
 
     const label =
-        document.getElementById('modal-type-label');
+        document.getElementById(
+            'modal-type-label'
+        );
 
     const submit =
-        document.getElementById('modal-submit');
+        document.getElementById(
+            'modal-submit'
+        );
 
     const select =
-        document.getElementById('modal-kategori');
+        document.getElementById(
+            'modal-kategori'
+        );
 
     if (type === 'IN') {
 
-        label.innerText = 'Pemasukan';
+        label.innerText =
+            'Pemasukan';
+
         label.className =
             'text-xs font-bold uppercase tracking-wider text-emerald-600';
 
-        submit.innerText = 'Simpan Pemasukan';
+        submit.innerText =
+            'Simpan Pemasukan';
+
         submit.className =
             'w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/20';
 
@@ -1833,11 +1946,15 @@ function updateTransactionModal(type) {
 
     } else {
 
-        label.innerText = 'Pengeluaran';
+        label.innerText =
+            'Pengeluaran';
+
         label.className =
             'text-xs font-bold uppercase tracking-wider text-rose-600';
 
-        submit.innerText = 'Simpan Pengeluaran';
+        submit.innerText =
+            'Simpan Pengeluaran';
+
         submit.className =
             'w-full py-3.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold shadow-lg shadow-rose-600/20';
 
@@ -1862,63 +1979,76 @@ function updateTransactionModal(type) {
 
 document
     .getElementById('transaction-form')
-    .addEventListener('submit', function(e) {
+    .addEventListener(
+        'submit',
+        function(e) {
 
-        e.preventDefault();
+            e.preventDefault();
 
-        const type =
-            document.getElementById(
-                'modal-transaction-type'
-            ).value;
-
-        const nominal =
-            Number(
+            const type =
                 document.getElementById(
-                    'modal-nominal'
-                ).value
+                    'modal-transaction-type'
+                ).value;
+
+            const nominal =
+                Number(
+                    document.getElementById(
+                        'modal-nominal'
+                    ).value
+                );
+
+            const kategori =
+                document.getElementById(
+                    'modal-kategori'
+                ).value;
+
+            const tanggal =
+                document.getElementById(
+                    'modal-tanggal'
+                ).value;
+
+            const keterangan =
+                document.getElementById(
+                    'modal-keterangan'
+                ).value.trim() || '-';
+
+            if (!nominal || nominal <= 0) {
+
+                toast(
+                    'Nominal tidak valid.'
+                );
+
+                return;
+            }
+
+            transactions.push({
+
+                id: Date.now(),
+
+                type,
+
+                nominal,
+
+                kategori,
+
+                tanggal,
+
+                keterangan
+            });
+
+            saveData();
+
+            closeTransactionModal();
+
+            renderApp();
+
+            toast(
+                type === 'IN'
+                    ? 'Pemasukan berhasil disimpan.'
+                    : 'Pengeluaran berhasil disimpan.'
             );
-
-        const kategori =
-            document.getElementById(
-                'modal-kategori'
-            ).value;
-
-        const tanggal =
-            document.getElementById(
-                'modal-tanggal'
-            ).value;
-
-        const keterangan =
-            document.getElementById(
-                'modal-keterangan'
-            ).value.trim() || '-';
-
-        if (!nominal || nominal <= 0) {
-            toast('Nominal tidak valid.');
-            return;
         }
-
-        transactions.push({
-            id: Date.now(),
-            type,
-            nominal,
-            kategori,
-            tanggal,
-            keterangan
-        });
-
-        saveData();
-
-        closeTransactionModal();
-
-        renderApp();
-
-        toast(
-            type === 'IN'
-                ? 'Pemasukan berhasil disimpan.'
-                : 'Pengeluaran berhasil disimpan.'
-        );
-    });
+    );
 
 
 /* =========================================================
@@ -1927,37 +2057,89 @@ document
 
 function deleteTransaction(id) {
 
-    if (!confirm('Hapus transaksi ini?')) return;
+    if (
+        !confirm(
+            'Hapus transaksi ini?'
+        )
+    ) {
+        return;
+    }
 
     transactions =
-        transactions.filter(tx => tx.id !== id);
+        transactions.filter(
+            tx => tx.id !== id
+        );
 
     saveData();
+
     renderApp();
 
-    toast('Transaksi dihapus.');
+    toast(
+        'Transaksi dihapus.'
+    );
 }
 
+
+/*
+ * HALAMAN TRANSAKSI
+ *
+ * Default = 5
+ *
+ * Pilihan:
+ * 5
+ * 10
+ * 50
+ * 100
+ */
 function renderTransactionsPage() {
 
     const tbody =
-        document.getElementById('tabel-transaksi');
+        document.getElementById(
+            'tabel-transaksi'
+        );
+
+    if (!tbody) return;
 
     const search =
         (
             document.getElementById(
                 'transaction-search'
             )?.value || ''
-        ).toLowerCase();
+        )
+        .toLowerCase()
+        .trim();
 
+    const limit =
+        Number(
+            document.getElementById(
+                'transaction-limit'
+            )?.value || 5
+        );
+
+    /*
+     * Filter search
+     */
     const filtered =
-        [...transactions]
-            .sort((a, b) => b.id - a.id)
-            .filter(tx =>
-                `${tx.kategori} ${tx.keterangan} ${tx.tanggal}`
-                    .toLowerCase()
-                    .includes(search)
-            );
+        sortTransactionsLatest(
+            transactions
+        )
+        .filter(tx => {
+
+            return `
+                ${tx.kategori}
+                ${tx.keterangan}
+                ${tx.tanggal}
+                ${tx.type === 'IN'
+                    ? 'pemasukan'
+                    : 'pengeluaran'}
+            `
+            .toLowerCase()
+            .includes(search);
+        })
+        /*
+         * Batasi data yang ditampilkan
+         */
+        .slice(0, limit);
 
     tbody.innerHTML = '';
 
@@ -1969,7 +2151,11 @@ function renderTransactionsPage() {
                     colspan="6"
                     class="py-12 text-center text-sm text-slate-400"
                 >
-                    Belum ada transaksi.
+                    ${
+                        search
+                            ? 'Tidak ada transaksi yang cocok.'
+                            : 'Belum ada transaksi.'
+                    }
                 </td>
             </tr>
         `;
@@ -1978,31 +2164,46 @@ function renderTransactionsPage() {
 
         filtered.forEach(tx => {
 
-            const income = tx.type === 'IN';
+            const income =
+                tx.type === 'IN';
 
             const tr =
-                document.createElement('tr');
+                document.createElement(
+                    'tr'
+                );
 
             tr.className =
                 'border-t border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition';
 
             tr.innerHTML = `
+
                 <td class="px-5 py-4 text-xs text-slate-500">
                     ${escapeHtml(tx.tanggal)}
                 </td>
 
                 <td class="px-5 py-4">
+
                     <span
                         class="
-                            inline-flex px-2.5 py-1 rounded-full
-                            text-[10px] font-bold
-                            ${income
-                                ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400'
-                                : 'bg-rose-50 text-rose-600 dark:bg-rose-950/40 dark:text-rose-400'}
+                            inline-flex
+                            px-2.5 py-1
+                            rounded-full
+                            text-[10px]
+                            font-bold
+                            ${
+                                income
+                                    ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400'
+                                    : 'bg-rose-50 text-rose-600 dark:bg-rose-950/40 dark:text-rose-400'
+                            }
                         "
                     >
-                        ${income ? 'Pemasukan' : 'Pengeluaran'}
+                        ${
+                            income
+                                ? 'Pemasukan'
+                                : 'Pengeluaran'
+                        }
                     </span>
+
                 </td>
 
                 <td class="px-5 py-4 text-sm font-semibold">
@@ -2017,22 +2218,33 @@ function renderTransactionsPage() {
                     class="
                         px-5 py-4
                         text-right
-                        text-sm font-extrabold
-                        ${income
-                            ? 'text-emerald-600'
-                            : 'text-rose-600'}
+                        text-sm
+                        font-extrabold
+                        ${
+                            income
+                                ? 'text-emerald-600'
+                                : 'text-rose-600'
+                        }
                     "
                 >
-                    ${income ? '+' : '-'} ${formatRupiah(tx.nominal)}
+                    ${income ? '+' : '-'}
+                    ${formatRupiah(tx.nominal)}
                 </td>
 
                 <td class="px-5 py-4 text-center">
+
                     <button
                         onclick="deleteTransaction(${tx.id})"
-                        class="text-xs font-bold text-slate-400 hover:text-rose-600"
+                        class="
+                            text-xs
+                            font-bold
+                            text-slate-400
+                            hover:text-rose-600
+                        "
                     >
                         Hapus
                     </button>
+
                 </td>
             `;
 
@@ -2040,27 +2252,49 @@ function renderTransactionsPage() {
         });
     }
 
+    /*
+     * PENTING:
+     *
+     * Summary tetap menghitung SEMUA transaksi.
+     * Bukan hanya transaksi yang sedang ditampilkan.
+     */
+
     const totalIn =
         transactions
-            .filter(x => x.type === 'IN')
-            .reduce((s, x) => s + Number(x.nominal), 0);
+            .filter(
+                x => x.type === 'IN'
+            )
+            .reduce(
+                (s, x) =>
+                    s + Number(x.nominal),
+                0
+            );
 
     const totalOut =
         transactions
-            .filter(x => x.type === 'OUT')
-            .reduce((s, x) => s + Number(x.nominal), 0);
+            .filter(
+                x => x.type === 'OUT'
+            )
+            .reduce(
+                (s, x) =>
+                    s + Number(x.nominal),
+                0
+            );
 
     document.getElementById(
         'transaction-total-in'
-    ).innerText = formatRupiah(totalIn);
+    ).innerText =
+        formatRupiah(totalIn);
 
     document.getElementById(
         'transaction-total-out'
-    ).innerText = formatRupiah(totalOut);
+    ).innerText =
+        formatRupiah(totalOut);
 
     document.getElementById(
         'transaction-count'
-    ).innerText = transactions.length;
+    ).innerText =
+        transactions.length;
 }
 
 
@@ -2070,74 +2304,112 @@ function renderTransactionsPage() {
 
 document
     .getElementById('form-hutang')
-    .addEventListener('submit', function(e) {
+    .addEventListener(
+        'submit',
+        function(e) {
 
-        e.preventDefault();
+            e.preventDefault();
 
-        const tipe =
-            document.getElementById(
-                'hutang-tipe'
-            ).value;
-
-        const nominal =
-            Number(
+            const tipe =
                 document.getElementById(
-                    'hutang-nominal'
-                ).value
-            );
+                    'hutang-tipe'
+                ).value;
 
-        const nama =
-            document.getElementById(
-                'hutang-nama'
-            ).value.trim();
+            const nominal =
+                Number(
+                    document.getElementById(
+                        'hutang-nominal'
+                    ).value
+                );
 
-        const tanggal =
+            const nama =
+                document.getElementById(
+                    'hutang-nama'
+                ).value.trim();
+
+            const tanggal =
+                document.getElementById(
+                    'hutang-tanggal'
+                ).value;
+
+            if (
+                !nominal ||
+                nominal <= 0 ||
+                !nama ||
+                !tanggal
+            ) {
+
+                toast(
+                    'Data hutang tidak valid.'
+                );
+
+                return;
+            }
+
+            debts.push({
+
+                id: Date.now(),
+
+                tipe,
+
+                nominal,
+
+                nama,
+
+                tanggal
+            });
+
+            saveData();
+
+            this.reset();
+
             document.getElementById(
                 'hutang-tanggal'
-            ).value;
+            ).value =
+                todayStr;
 
-        debts.push({
-            id: Date.now(),
-            tipe,
-            nominal,
-            nama,
-            tanggal
-        });
+            renderDebts();
 
-        saveData();
-        this.reset();
-
-        document.getElementById(
-            'hutang-tanggal'
-        ).value = todayStr;
-
-        renderDebts();
-
-        toast('Catatan berhasil disimpan.');
-    });
+            toast(
+                'Catatan berhasil disimpan.'
+            );
+        }
+    );
 
 
 function deleteDebt(id) {
 
-    if (!confirm('Tandai catatan ini sebagai lunas?')) {
+    if (
+        !confirm(
+            'Tandai catatan ini sebagai lunas?'
+        )
+    ) {
         return;
     }
 
     debts =
-        debts.filter(d => d.id !== id);
+        debts.filter(
+            d => d.id !== id
+        );
 
     saveData();
+
     renderDebts();
+
     renderApp();
 
-    toast('Catatan telah diselesaikan.');
+    toast(
+        'Catatan telah diselesaikan.'
+    );
 }
 
 
 function renderDebts() {
 
     const tbody =
-        document.getElementById('tabel-hutang');
+        document.getElementById(
+            'tabel-hutang'
+        );
 
     tbody.innerHTML = '';
 
@@ -2147,9 +2419,14 @@ function renderDebts() {
     debts.forEach(d => {
 
         if (d.tipe === 'Hutang') {
-            totalHutang += Number(d.nominal);
+
+            totalHutang +=
+                Number(d.nominal);
+
         } else {
-            totalPiutang += Number(d.nominal);
+
+            totalPiutang +=
+                Number(d.nominal);
         }
     });
 
@@ -2169,9 +2446,10 @@ function renderDebts() {
     } else {
 
         [...debts]
-            .sort((a, b) =>
-                new Date(a.tanggal) -
-                new Date(b.tanggal)
+            .sort(
+                (a, b) =>
+                    new Date(a.tanggal) -
+                    new Date(b.tanggal)
             )
             .forEach(d => {
 
@@ -2179,28 +2457,42 @@ function renderDebts() {
                     d.tipe === 'Hutang';
 
                 const tr =
-                    document.createElement('tr');
+                    document.createElement(
+                        'tr'
+                    );
 
                 tr.className =
                     'border-t border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition';
 
                 tr.innerHTML = `
+
                     <td class="px-5 py-4 text-xs text-slate-500">
                         ${escapeHtml(d.tanggal)}
                     </td>
 
                     <td class="px-5 py-4">
+
                         <span
                             class="
-                                inline-flex px-2.5 py-1 rounded-full
-                                text-[10px] font-bold
-                                ${isDebt
-                                    ? 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400'
-                                    : 'bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400'}
+                                inline-flex
+                                px-2.5 py-1
+                                rounded-full
+                                text-[10px]
+                                font-bold
+                                ${
+                                    isDebt
+                                        ? 'bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400'
+                                        : 'bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400'
+                                }
                             "
                         >
-                            ${isDebt ? 'Hutang' : 'Piutang'}
+                            ${
+                                isDebt
+                                    ? 'Hutang'
+                                    : 'Piutang'
+                            }
                         </span>
+
                     </td>
 
                     <td class="px-5 py-4 text-sm font-semibold">
@@ -2211,16 +2503,20 @@ function renderDebts() {
                         class="
                             px-5 py-4
                             text-right
-                            text-sm font-extrabold
-                            ${isDebt
-                                ? 'text-amber-600'
-                                : 'text-blue-600'}
+                            text-sm
+                            font-extrabold
+                            ${
+                                isDebt
+                                    ? 'text-amber-600'
+                                    : 'text-blue-600'
+                            }
                         "
                     >
                         ${formatRupiah(d.nominal)}
                     </td>
 
                     <td class="px-5 py-4 text-center">
+
                         <button
                             onclick="deleteDebt(${d.id})"
                             class="
@@ -2236,6 +2532,7 @@ function renderDebts() {
                         >
                             Lunas
                         </button>
+
                     </td>
                 `;
 
@@ -2245,14 +2542,17 @@ function renderDebts() {
 
     document.getElementById(
         'total-hutang'
-    ).innerText = formatRupiah(totalHutang);
+    ).innerText =
+        formatRupiah(totalHutang);
 
     document.getElementById(
         'total-piutang'
-    ).innerText = formatRupiah(totalPiutang);
+    ).innerText =
+        formatRupiah(totalPiutang);
 
     const net =
-        totalPiutang - totalHutang;
+        totalPiutang -
+        totalHutang;
 
     const netEl =
         document.getElementById(
@@ -2277,37 +2577,61 @@ function renderDebts() {
 
 document
     .getElementById('form-wishlist')
-    .addEventListener('submit', function(e) {
+    .addEventListener(
+        'submit',
+        function(e) {
 
-        e.preventDefault();
+            e.preventDefault();
 
-        const nama =
-            document.getElementById(
-                'wish-nama'
-            ).value.trim();
-
-        const harga =
-            Number(
+            const nama =
                 document.getElementById(
-                    'wish-harga'
-                ).value
+                    'wish-nama'
+                ).value.trim();
+
+            const harga =
+                Number(
+                    document.getElementById(
+                        'wish-harga'
+                    ).value
+                );
+
+            if (
+                !nama ||
+                !harga ||
+                harga <= 0
+            ) {
+
+                toast(
+                    'Data target tidak valid.'
+                );
+
+                return;
+            }
+
+            wishlist.push({
+
+                id: Date.now(),
+
+                nama,
+
+                harga,
+
+                logs: []
+            });
+
+            saveData();
+
+            this.reset();
+
+            renderWishlist();
+
+            renderApp();
+
+            toast(
+                'Target berhasil ditambahkan.'
             );
-
-        wishlist.push({
-            id: Date.now(),
-            nama,
-            harga,
-            logs: []
-        });
-
-        saveData();
-        this.reset();
-
-        renderWishlist();
-        renderApp();
-
-        toast('Target berhasil ditambahkan.');
-    });
+        }
+    );
 
 
 function addMoneyToWish(id) {
@@ -2320,45 +2644,72 @@ function addMoneyToWish(id) {
     const nominal =
         Number(input.value);
 
-    if (!nominal || nominal <= 0) {
-        toast('Nominal setoran tidak valid.');
+    if (
+        !nominal ||
+        nominal <= 0
+    ) {
+
+        toast(
+            'Nominal setoran tidak valid.'
+        );
+
         return;
     }
 
     const item =
-        wishlist.find(w => w.id === id);
+        wishlist.find(
+            w => w.id === id
+        );
 
     if (!item) return;
 
-    item.logs = item.logs || [];
+    item.logs =
+        item.logs || [];
 
     item.logs.push({
-        tanggal: todayStr,
+
+        tanggal:
+            todayStr,
+
         nominal
     });
 
     saveData();
 
     renderWishlist();
+
     renderApp();
 
-    toast('Setoran berhasil ditambahkan.');
+    toast(
+        'Setoran berhasil ditambahkan.'
+    );
 }
 
 
 function deleteWish(id) {
 
-    if (!confirm('Hapus target ini?')) return;
+    if (
+        !confirm(
+            'Hapus target ini?'
+        )
+    ) {
+        return;
+    }
 
     wishlist =
-        wishlist.filter(w => w.id !== id);
+        wishlist.filter(
+            w => w.id !== id
+        );
 
     saveData();
 
     renderWishlist();
+
     renderApp();
 
-    toast('Target dihapus.');
+    toast(
+        'Target dihapus.'
+    );
 }
 
 
@@ -2374,7 +2725,9 @@ function renderWishlist() {
     let totalTarget = 0;
 
     wishlist.forEach(w => {
-        totalTarget += Number(w.harga);
+
+        totalTarget +=
+            Number(w.harga);
     });
 
     document.getElementById(
@@ -2385,18 +2738,24 @@ function renderWishlist() {
     if (!wishlist.length) {
 
         grid.innerHTML = `
+
             <div
                 class="
                     col-span-full
                     py-16
                     text-center
-                    bg-white dark:bg-slate-900
+                    bg-white
+                    dark:bg-slate-900
                     border border-dashed
-                    border-slate-300 dark:border-slate-700
+                    border-slate-300
+                    dark:border-slate-700
                     rounded-2xl
                 "
             >
-                <div class="text-4xl mb-3">🎯</div>
+
+                <div class="text-4xl mb-3">
+                    🎯
+                </div>
 
                 <p class="font-bold">
                     Belum ada target
@@ -2405,6 +2764,7 @@ function renderWishlist() {
                 <p class="text-xs text-slate-400 mt-1">
                     Tambahkan barang impian kamu.
                 </p>
+
             </div>
         `;
 
@@ -2419,26 +2779,33 @@ function renderWishlist() {
         const collected =
             logs.reduce(
                 (sum, log) =>
-                    sum + Number(log.nominal),
+                    sum +
+                    Number(log.nominal),
                 0
             );
 
         const remaining =
             Math.max(
                 0,
-                Number(w.harga) - collected
+                Number(w.harga) -
+                collected
             );
 
         const percentage =
             Math.min(
                 100,
                 Number(w.harga)
-                    ? (collected / Number(w.harga)) * 100
+                    ? (
+                        collected /
+                        Number(w.harga)
+                    ) * 100
                     : 0
             );
 
         const card =
-            document.createElement('div');
+            document.createElement(
+                'div'
+            );
 
         card.className =
             'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 card';
@@ -2448,6 +2815,7 @@ function renderWishlist() {
             <div class="flex justify-between items-start">
 
                 <div>
+
                     <span
                         class="
                             inline-flex
@@ -2467,6 +2835,7 @@ function renderWishlist() {
                     <h3 class="mt-3 font-extrabold text-base">
                         ${escapeHtml(w.nama)}
                     </h3>
+
                 </div>
 
                 <button
@@ -2481,6 +2850,7 @@ function renderWishlist() {
             <div class="mt-5 flex justify-between text-xs">
 
                 <div>
+
                     <p class="text-slate-400">
                         Terkumpul
                     </p>
@@ -2488,9 +2858,11 @@ function renderWishlist() {
                     <p class="mt-1 font-extrabold text-emerald-600">
                         ${formatRupiah(collected)}
                     </p>
+
                 </div>
 
                 <div class="text-right">
+
                     <p class="text-slate-400">
                         Target
                     </p>
@@ -2498,6 +2870,7 @@ function renderWishlist() {
                     <p class="mt-1 font-extrabold">
                         ${formatRupiah(w.harga)}
                     </p>
+
                 </div>
 
             </div>
@@ -2525,6 +2898,7 @@ function renderWishlist() {
                         overflow-hidden
                     "
                 >
+
                     <div
                         class="
                             h-full
@@ -2535,6 +2909,7 @@ function renderWishlist() {
                         "
                         style="width:${percentage}%"
                     ></div>
+
                 </div>
 
             </div>
@@ -2574,8 +2949,11 @@ function renderWishlist() {
                         flex-1
                         px-3 py-2.5
                         rounded-xl
-                        bg-slate-50 dark:bg-slate-800
-                        border border-slate-200 dark:border-slate-700
+                        bg-slate-50
+                        dark:bg-slate-800
+                        border
+                        border-slate-200
+                        dark:border-slate-700
                         text-xs
                     "
                 >
@@ -2596,7 +2974,6 @@ function renderWishlist() {
                 </button>
 
             </div>
-
         `;
 
         grid.appendChild(card);
@@ -2614,7 +2991,10 @@ function calculateStats() {
         todayStr;
 
     const month =
-        today.substring(0, 7);
+        today.substring(
+            0,
+            7
+        );
 
     let todayIn = 0;
     let todayOut = 0;
@@ -2631,42 +3011,68 @@ function calculateStats() {
             Number(tx.nominal);
 
         if (tx.type === 'IN') {
+
             totalIn += amount;
+
         } else {
+
             totalOut += amount;
         }
 
         if (tx.tanggal === today) {
 
             if (tx.type === 'IN') {
+
                 todayIn += amount;
+
             } else {
+
                 todayOut += amount;
             }
         }
 
-        if (tx.tanggal.startsWith(month)) {
+        if (
+            tx.tanggal.startsWith(
+                month
+            )
+        ) {
 
             if (tx.type === 'IN') {
+
                 monthIn += amount;
+
             } else {
+
                 monthOut += amount;
             }
         }
     });
 
     return {
+
         todayIn,
+
         todayOut,
-        todayNet: todayIn - todayOut,
+
+        todayNet:
+            todayIn -
+            todayOut,
 
         monthIn,
+
         monthOut,
-        monthNet: monthIn - monthOut,
+
+        monthNet:
+            monthIn -
+            monthOut,
 
         totalIn,
+
         totalOut,
-        balance: totalIn - totalOut
+
+        balance:
+            totalIn -
+            totalOut
     };
 }
 
@@ -2679,17 +3085,23 @@ function renderDashboard() {
     document.getElementById(
         'total-saldo'
     ).innerText =
-        formatRupiah(stats.balance);
+        formatRupiah(
+            stats.balance
+        );
 
     document.getElementById(
         'bulan-ini-masuk-card'
     ).innerText =
-        formatRupiah(stats.monthIn);
+        formatRupiah(
+            stats.monthIn
+        );
 
     document.getElementById(
         'bulan-ini-keluar-card'
     ).innerText =
-        formatRupiah(stats.monthOut);
+        formatRupiah(
+            stats.monthOut
+        );
 
     const netEl =
         document.getElementById(
@@ -2697,7 +3109,9 @@ function renderDashboard() {
         );
 
     netEl.innerText =
-        formatRupiah(stats.monthNet);
+        formatRupiah(
+            stats.monthNet
+        );
 
     netEl.className =
         `mt-1 text-xl sm:text-2xl font-extrabold ${
@@ -2709,12 +3123,16 @@ function renderDashboard() {
     document.getElementById(
         'hari-ini-masuk'
     ).innerText =
-        formatRupiah(stats.todayIn);
+        formatRupiah(
+            stats.todayIn
+        );
 
     document.getElementById(
         'hari-ini-keluar'
     ).innerText =
-        formatRupiah(stats.todayOut);
+        formatRupiah(
+            stats.todayOut
+        );
 
     const todayNet =
         document.getElementById(
@@ -2722,7 +3140,9 @@ function renderDashboard() {
         );
 
     todayNet.innerText =
-        formatRupiah(stats.todayNet);
+        formatRupiah(
+            stats.todayNet
+        );
 
     todayNet.className =
         `text-sm font-extrabold ${
@@ -2749,12 +3169,15 @@ function renderDashboard() {
         wishlist.length;
 
     renderRecentTransactions();
+
     renderFinancialMessage();
 }
 
 
 /* =========================================================
    RECENT TRANSACTIONS
+ *
+ * DASHBOARD = HANYA 5
 ========================================================= */
 
 function renderRecentTransactions() {
@@ -2764,16 +3187,21 @@ function renderRecentTransactions() {
             'recent-transactions'
         );
 
+    /*
+     * Ambil transaksi terbaru
+     * lalu batasi hanya 5.
+     */
     const recent =
-        [...transactions]
-            .sort((a, b) => b.id - a.id)
-            .slice(0, 6);
+        sortTransactionsLatest(
+            transactions
+        ).slice(0, 5);
 
     container.innerHTML = '';
 
     if (!recent.length) {
 
         container.innerHTML = `
+
             <div
                 class="
                     py-10
@@ -2795,7 +3223,9 @@ function renderRecentTransactions() {
             tx.type === 'IN';
 
         const item =
-            document.createElement('div');
+            document.createElement(
+                'div'
+            );
 
         item.className =
             'flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition';
@@ -2806,8 +3236,11 @@ function renderRecentTransactions() {
                 class="
                     w-10 h-10
                     rounded-xl
-                    flex items-center justify-center
-                    text-sm font-bold
+                    flex
+                    items-center
+                    justify-center
+                    text-sm
+                    font-bold
                     ${
                         income
                             ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-950/40'
@@ -2825,7 +3258,9 @@ function renderRecentTransactions() {
                 </p>
 
                 <p class="text-[10px] text-slate-400 mt-1">
-                    ${escapeHtml(tx.kategori)} · ${escapeHtml(tx.tanggal)}
+                    ${escapeHtml(tx.kategori)}
+                    ·
+                    ${escapeHtml(tx.tanggal)}
                 </p>
 
             </div>
@@ -2842,9 +3277,9 @@ function renderRecentTransactions() {
                     }
                 "
             >
-                ${income ? '+' : '-'} ${formatRupiah(tx.nominal)}
+                ${income ? '+' : '-'}
+                ${formatRupiah(tx.nominal)}
             </p>
-
         `;
 
         container.appendChild(item);
@@ -2868,12 +3303,16 @@ function renderFinancialMessage() {
         message =
             'Mulai catat transaksi pertamamu untuk mendapatkan insight keuangan.';
 
-    } else if (stats.monthNet > 0) {
+    } else if (
+        stats.monthNet > 0
+    ) {
 
         message =
             'Cash flow bulan ini masih positif. Pertahankan kebiasaan mencatat dan kontrol pengeluaran.';
 
-    } else if (stats.monthNet < 0) {
+    } else if (
+        stats.monthNet < 0
+    ) {
 
         message =
             'Pengeluaran bulan ini lebih besar dari pemasukan. Coba tinjau kategori pengeluaran terbesar.';
@@ -2886,7 +3325,8 @@ function renderFinancialMessage() {
 
     document.getElementById(
         'financial-message'
-    ).innerText = message;
+    ).innerText =
+        message;
 }
 
 
@@ -2901,7 +3341,11 @@ function getLastSixMonths() {
     const now =
         new Date();
 
-    for (let i = 5; i >= 0; i--) {
+    for (
+        let i = 5;
+        i >= 0;
+        i--
+    ) {
 
         const d =
             new Date(
@@ -2911,10 +3355,17 @@ function getLastSixMonths() {
             );
 
         result.push({
-            key: getMonthKey(d),
+
+            key:
+                getMonthKey(d),
+
             label:
-                monthNames[d.getMonth()]
-                    .substring(0, 3)
+                monthNames[
+                    d.getMonth()
+                ].substring(
+                    0,
+                    3
+                )
         });
     }
 
@@ -2929,34 +3380,46 @@ function updateCharts() {
 
     const incomeData =
         months.map(m =>
+
             transactions
                 .filter(tx =>
+
                     tx.type === 'IN' &&
-                    tx.tanggal.startsWith(m.key)
+                    tx.tanggal.startsWith(
+                        m.key
+                    )
                 )
                 .reduce(
                     (s, tx) =>
-                        s + Number(tx.nominal),
+                        s +
+                        Number(tx.nominal),
                     0
                 )
         );
 
     const expenseData =
         months.map(m =>
+
             transactions
                 .filter(tx =>
+
                     tx.type === 'OUT' &&
-                    tx.tanggal.startsWith(m.key)
+                    tx.tanggal.startsWith(
+                        m.key
+                    )
                 )
                 .reduce(
                     (s, tx) =>
-                        s + Number(tx.nominal),
+                        s +
+                        Number(tx.nominal),
                     0
                 )
         );
 
     const isDark =
-        document.documentElement.classList.contains('dark');
+        document.documentElement
+            .classList
+            .contains('dark');
 
     const gridColor =
         isDark
@@ -2984,54 +3447,102 @@ function updateCharts() {
         new Chart(
             cashCanvas,
             {
+
                 type: 'line',
 
                 data: {
+
                     labels:
-                        months.map(m => m.label),
+                        months.map(
+                            m => m.label
+                        ),
 
                     datasets: [
 
                         {
-                            label: 'Pemasukan',
-                            data: incomeData,
-                            borderColor: '#10b981',
-                            backgroundColor: 'rgba(16,185,129,.10)',
-                            fill: true,
-                            tension: .4,
-                            borderWidth: 2.5,
-                            pointRadius: 3,
-                            pointBackgroundColor: '#10b981'
+
+                            label:
+                                'Pemasukan',
+
+                            data:
+                                incomeData,
+
+                            borderColor:
+                                '#10b981',
+
+                            backgroundColor:
+                                'rgba(16,185,129,.10)',
+
+                            fill:
+                                true,
+
+                            tension:
+                                .4,
+
+                            borderWidth:
+                                2.5,
+
+                            pointRadius:
+                                3,
+
+                            pointBackgroundColor:
+                                '#10b981'
                         },
 
                         {
-                            label: 'Pengeluaran',
-                            data: expenseData,
-                            borderColor: '#f43f5e',
-                            backgroundColor: 'rgba(244,63,94,.05)',
-                            fill: true,
-                            tension: .4,
-                            borderWidth: 2.5,
-                            pointRadius: 3,
-                            pointBackgroundColor: '#f43f5e'
+
+                            label:
+                                'Pengeluaran',
+
+                            data:
+                                expenseData,
+
+                            borderColor:
+                                '#f43f5e',
+
+                            backgroundColor:
+                                'rgba(244,63,94,.05)',
+
+                            fill:
+                                true,
+
+                            tension:
+                                .4,
+
+                            borderWidth:
+                                2.5,
+
+                            pointRadius:
+                                3,
+
+                            pointBackgroundColor:
+                                '#f43f5e'
                         }
 
                     ]
                 },
 
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
+
+                    responsive:
+                        true,
+
+                    maintainAspectRatio:
+                        false,
 
                     plugins: {
+
                         legend: {
                             display: false
                         },
 
                         tooltip: {
+
                             callbacks: {
-                                label: context =>
-                                    `${context.dataset.label}: ${formatRupiah(context.raw)}`
+
+                                label:
+                                    context =>
+                                        `${context.dataset.label}: ${formatRupiah(context.raw)}`
                             }
                         }
                     },
@@ -3039,11 +3550,16 @@ function updateCharts() {
                     scales: {
 
                         x: {
+
                             grid: {
                                 display: false
                             },
+
                             ticks: {
-                                color: textColor,
+
+                                color:
+                                    textColor,
+
                                 font: {
                                     size: 10
                                 }
@@ -3051,24 +3567,45 @@ function updateCharts() {
                         },
 
                         y: {
-                            beginAtZero: true,
+
+                            beginAtZero:
+                                true,
+
                             grid: {
-                                color: gridColor
+
+                                color:
+                                    gridColor
                             },
+
                             ticks: {
-                                color: textColor,
+
+                                color:
+                                    textColor,
+
                                 font: {
                                     size: 10
                                 },
-                                callback: value =>
-                                    value >= 1000000
-                                        ? `${(value / 1000000).toFixed(1)}jt`
-                                        : value >= 1000
-                                            ? `${(value / 1000).toFixed(0)}k`
-                                            : value
+
+                                callback:
+                                    value =>
+
+                                        value >= 1000000
+
+                                            ? `${(
+                                                value /
+                                                1000000
+                                            ).toFixed(1)}jt`
+
+                                            : value >= 1000
+
+                                                ? `${(
+                                                    value /
+                                                    1000
+                                                ).toFixed(0)}k`
+
+                                                : value
                             }
                         }
-
                     }
                 }
             }
@@ -3078,29 +3615,48 @@ function updateCharts() {
     /* EXPENSE CATEGORY */
 
     const currentMonth =
-        todayStr.substring(0, 7);
+        todayStr.substring(
+            0,
+            7
+        );
 
     const categories = {};
 
     transactions
         .filter(tx =>
+
             tx.type === 'OUT' &&
-            tx.tanggal.startsWith(currentMonth)
+            tx.tanggal.startsWith(
+                currentMonth
+            )
         )
         .forEach(tx => {
 
-            categories[tx.kategori] =
-                (categories[tx.kategori] || 0) +
-                Number(tx.nominal);
+            categories[
+                tx.kategori
+            ] =
+                (
+                    categories[
+                        tx.kategori
+                    ] || 0
+                ) +
+                Number(
+                    tx.nominal
+                );
         });
 
     const labels =
-        Object.keys(categories);
+        Object.keys(
+            categories
+        );
 
     const values =
-        Object.values(categories);
+        Object.values(
+            categories
+        );
 
     const colors = [
+
         '#10b981',
         '#6366f1',
         '#f59e0b',
@@ -3124,39 +3680,63 @@ function updateCharts() {
         new Chart(
             expenseCanvas,
             {
-                type: 'doughnut',
+
+                type:
+                    'doughnut',
 
                 data: {
+
                     labels,
+
                     datasets: [
+
                         {
-                            data: values,
+
+                            data:
+                                values,
+
                             backgroundColor:
                                 labels.map(
                                     (_, i) =>
-                                        colors[i % colors.length]
+                                        colors[
+                                            i %
+                                            colors.length
+                                        ]
                                 ),
-                            borderWidth: 0,
-                            hoverOffset: 5
+
+                            borderWidth:
+                                0,
+
+                            hoverOffset:
+                                5
                         }
                     ]
                 },
 
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
 
-                    cutout: '72%',
+                    responsive:
+                        true,
+
+                    maintainAspectRatio:
+                        false,
+
+                    cutout:
+                        '72%',
 
                     plugins: {
+
                         legend: {
                             display: false
                         },
 
                         tooltip: {
+
                             callbacks: {
-                                label: context =>
-                                    `${context.label}: ${formatRupiah(context.raw)}`
+
+                                label:
+                                    context =>
+                                        `${context.label}: ${formatRupiah(context.raw)}`
                             }
                         }
                     }
@@ -3175,6 +3755,7 @@ function updateCharts() {
     if (!labels.length) {
 
         legend.innerHTML = `
+
             <p class="text-xs text-slate-400 text-center">
                 Belum ada pengeluaran bulan ini.
             </p>
@@ -3182,31 +3763,58 @@ function updateCharts() {
 
     } else {
 
-        labels.forEach((label, i) => {
+        labels.forEach(
+            (label, i) => {
 
-            legend.innerHTML += `
-                <div class="flex items-center justify-between text-xs">
+                legend.innerHTML += `
 
-                    <span class="flex items-center gap-2">
+                    <div
+                        class="
+                            flex
+                            items-center
+                            justify-between
+                            text-xs
+                        "
+                    >
 
                         <span
-                            class="w-2 h-2 rounded-full"
-                            style="background:${colors[i % colors.length]}"
-                        ></span>
+                            class="
+                                flex
+                                items-center
+                                gap-2
+                            "
+                        >
 
-                        <span class="text-slate-500 dark:text-slate-400">
-                            ${escapeHtml(label)}
+                            <span
+                                class="w-2 h-2 rounded-full"
+                                style="
+                                    background:
+                                    ${colors[
+                                        i %
+                                        colors.length
+                                    ]}
+                                "
+                            ></span>
+
+                            <span
+                                class="
+                                    text-slate-500
+                                    dark:text-slate-400
+                                "
+                            >
+                                ${escapeHtml(label)}
+                            </span>
+
                         </span>
 
-                    </span>
+                        <span class="font-bold">
+                            ${formatRupiah(values[i])}
+                        </span>
 
-                    <span class="font-bold">
-                        ${formatRupiah(values[i])}
-                    </span>
-
-                </div>
-            `;
-        });
+                    </div>
+                `;
+            }
+        );
     }
 }
 
@@ -3239,10 +3847,19 @@ const now =
 document.getElementById(
     'top-date'
 ).innerText =
-    `${now.getDate()} ${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+    `${now.getDate()} ${
+        monthNames[
+            now.getMonth()
+        ]
+    } ${now.getFullYear()}`;
 
 document.getElementById(
     'hutang-tanggal'
+).value =
+    todayStr;
+
+document.getElementById(
+    'modal-tanggal'
 ).value =
     todayStr;
 
